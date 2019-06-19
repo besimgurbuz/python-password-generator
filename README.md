@@ -1,7 +1,7 @@
 ## Password Generator with logging
 
-Generates Password with current timestamp and random ascii digits.<br>
-Length for password (Max 25 length)<br>
+Generates password with current timestamp and random ascii digits.<br>
+Length for password (Default Max 25 length)<br>
 Levels<br>
 1 -> only uppercase charcters<br>
 2 -> uppercase and lowercase charcters<br>
