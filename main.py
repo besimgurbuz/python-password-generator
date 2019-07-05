@@ -1,5 +1,13 @@
 import logging
+import argparse
 import generatepassword
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-s", "--security", help="Set the security level", type=int)
+parser.add_argument("-l", "--length", help="Set the password length", type=int)
+args = parser.parse_args()
+
 
 PasswordGenerator = generatepassword.GeneratePassword
 
@@ -10,7 +18,7 @@ logging.basicConfig(filename="./log/generator.log",
 
 logger = logging.getLogger()
 
-generator = PasswordGenerator(4,14)
+generator = PasswordGenerator(args.security, args.length)
 
 password = generator.generate_password()
 
